@@ -1,8 +1,8 @@
 package com.ajs;
 
+import static org.junit.Assert.*;
+
 import java.text.ParseException;
-import java.util.ArrayList;
-import java.util.List;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -51,9 +51,9 @@ public class SpringBootMvcApplicationTests {
 //				repo.save(j);
 //				repoA.save(a);
 				Author aa = repoA.findAll().get(0);
-				
+				assertNull(repo.findAll());
 //				System.out.println(aa.getJournaux());
-				System.out.println(repo.findAll());
+//				System.out.println(repo.findAll());
 			} catch (ParseException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
