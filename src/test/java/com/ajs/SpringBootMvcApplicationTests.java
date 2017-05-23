@@ -51,7 +51,7 @@ public class SpringBootMvcApplicationTests {
 //				repo.save(j);
 //				repoA.save(a);
 				Author aa = repoA.findAll().get(0);
-				assertNull(repo.findAll());
+				assertNotNull(repo.findAll());
 //				System.out.println(aa.getJournaux());
 //				System.out.println(repo.findAll());
 			} catch (ParseException e) {
