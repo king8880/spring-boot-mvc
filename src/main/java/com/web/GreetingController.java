@@ -18,7 +18,7 @@ import com.repository.AuthorRepository;
 import com.repository.JournalRepository;
 
 @Controller
-public class JournalManagerController {
+public class GreetingController {
 	
 	@Autowired
 	JournalRepository repo;
@@ -26,8 +26,8 @@ public class JournalManagerController {
 	@Autowired
 	AuthorRepository repoA;
 
-    @RequestMapping("/init")
-    public String init(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
+    @RequestMapping("/greeting")
+    public String greeting(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
 //        model.addAttribute("name", name);
 	
 //    	Journal j;
@@ -64,11 +64,6 @@ public class JournalManagerController {
     	Journal j = new Journal("Get to know Spring Boot","Today I will learn SpringBoot", "01/01/2016");
 		
 		Author a = new Author("jim");
-		a.getJournaux().add(j);
-		repoA.save(a);
-		
-		j = new Journal("Get to know Spring Boot","Today I will learn SpringBoot", "01/01/2016");
-		
 		a.getJournaux().add(j);
 		repoA.save(a);
 		
