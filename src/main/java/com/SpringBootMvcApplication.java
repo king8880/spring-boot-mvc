@@ -20,6 +20,12 @@ public class SpringBootMvcApplication {
 				"01/01/2016");
 		Author a = new Author("jim");
 		a.getJournaux().add(j);
+		
+		Journal jj =  new Journal("Get to know Spring Boot","Today I will learn SpringBoot",
+				"01/01/2016");
+
+		a.getJournaux().add(jj);
+		
 //		j.getAuthors().add(a);
 //		repo.save(j);
 		aRepo.save(a);
