@@ -64,7 +64,12 @@ public class GreetingController {
     	Journal j = new Journal("Get to know Spring Boot","Today I will learn SpringBoot", "01/01/2016");
 		
 		Author a = new Author("jim");
+		
 		a.getJournaux().add(j);
+		
+		Journal jj = new Journal("Get to know Spring Boot","Today I will learn SpringBoot", "01/01/2016");
+		
+		a.getJournaux().add(jj);
 		repoA.save(a);
 		
     	} catch (ParseException e) {
