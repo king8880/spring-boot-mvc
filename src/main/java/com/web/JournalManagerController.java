@@ -65,7 +65,6 @@ public class JournalManagerController {
 		
 		Author a = new Author("jim");
 		a.getJournaux().add(j);
-		repoA.save(a);
 		
 		j = new Journal("Get to know Spring Boot","Today I will learn SpringBoot", "01/01/2016");
 		
