@@ -70,7 +70,9 @@ public class JournalManagerController {
 		
 		a.getJournaux().add(j);
 		
+
 		j = new Journal("Important to know Spring Boot","Today I will learn SpringBoot", "01/01/2016");
+
 		a.getJournaux().add(j);
 		repoA.save(a);
 		
