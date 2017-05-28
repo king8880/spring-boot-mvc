@@ -18,7 +18,7 @@ import com.repository.AuthorRepository;
 import com.repository.JournalRepository;
 
 @Controller
-public class GreetingController {
+public class JournalManagerController {
 	
 	@Autowired
 	JournalRepository repo;
@@ -26,8 +26,8 @@ public class GreetingController {
 	@Autowired
 	AuthorRepository repoA;
 
-    @RequestMapping("/greeting")
-    public String greeting(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
+    @RequestMapping("/init")
+    public String init(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
 //        model.addAttribute("name", name);
 	
 //    	Journal j;
@@ -64,12 +64,11 @@ public class GreetingController {
     	Journal j = new Journal("Get to know Spring Boot","Today I will learn SpringBoot", "01/01/2016");
 		
 		Author a = new Author("jim");
-		
 		a.getJournaux().add(j);
 		
-		Journal jj = new Journal("Get to know Spring Boot","Today I will learn SpringBoot", "01/01/2016");
+		j = new Journal("Get to know Spring Boot","Today I will learn SpringBoot", "01/01/2016");
 		
-		a.getJournaux().add(jj);
+		a.getJournaux().add(j);
 		repoA.save(a);
 		
     	} catch (ParseException e) {
