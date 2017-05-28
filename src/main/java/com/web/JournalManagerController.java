@@ -18,7 +18,7 @@ import com.repository.AuthorRepository;
 import com.repository.JournalRepository;
 
 @Controller
-public class GreetingController {
+public class JournalManagerController {
 	
 	@Autowired
 	JournalRepository repo;
@@ -26,8 +26,8 @@ public class GreetingController {
 	@Autowired
 	AuthorRepository repoA;
 
-    @RequestMapping("/greeting")
-    public String greeting(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
+    @RequestMapping("/init")
+    public String init(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
 //        model.addAttribute("name", name);
 	
 //    	Journal j;
