@@ -1,14 +1,15 @@
 package com.web;
 
 import java.text.ParseException;
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -105,6 +106,11 @@ public class JournalManagerController {
     @RequestMapping(value="/author", produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
     public @ResponseBody List<Author> getAuthor(){
     	return repoA.findAll();
+    }
+    
+    @RequestMapping(value="/journal/{title}", method = RequestMethod.GET)
+    public @ResponseBody Journal getJounrlByTitle(@PathVariable(value = "title") String title){
+    	return repo.findByTitle(title);
     }
 
 }

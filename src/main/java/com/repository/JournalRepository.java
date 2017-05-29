@@ -6,5 +6,7 @@ import com.domain.Journal;
 
 public interface JournalRepository extends JpaRepository<Journal, Long> { 
 	
+	public Journal findByTitle(String title);
+	
 	
 }
