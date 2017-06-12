@@ -19,7 +19,7 @@ import com.repository.AuthorRepository;
 import com.repository.JournalRepository;
 
 @Controller
-public class JournalManagerController {
+public class AuthorManagerController {
 	
 	@Autowired
 	JournalRepository repo;

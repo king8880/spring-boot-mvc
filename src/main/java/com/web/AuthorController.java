@@ -14,7 +14,7 @@ import com.repository.JournalRepository;
 
 @RestController
 @RequestMapping(value="journal")
-public class JournalController {
+public class AuthorController {
 	
 	@Autowired
 	JournalRepository journalRepo;
